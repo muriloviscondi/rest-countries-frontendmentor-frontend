@@ -1,0 +1,119 @@
+:root {
+  --dark-mode-elements-color: hsl(209, 23%, 22%);
+  --dark-mode-background-color: hsl(207, 26%, 17%);
+  
+  --light-mode-text-color: hsl(200, 15%, 8%);
+  --light-mode-input-color: hsl(0, 0%, 52%);
+  --light-mode-background-color: hsl(0, 0%, 98%);
+  }
+
+nav {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+
+.nav__title h1 {
+  font-size: 18px;
+}
+
+.nav__dark-light-mode {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.nav__moon {
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.nav__dark-light16px-mode span {
+  font-size: 14px;
+}
+
+.content-input {
+  padding:50px;
+  display: flex;
+  align-items: center;
+}
+
+/*=== SEARCH BAR ===*/
+.classification-search {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#filter-region,
+.content-input {
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: var(--light-mode-background-color);
+}
+
+.icon-search {
+  width: 20px;
+  margin: auto 15px;
+  color: var(--light-mode-input-color);
+}
+
+input[type=text] {
+  width: 400px;
+  height: 25px;
+  font-size: 14px;
+  color: var(--light-mode-input-color);
+  background: transparent;
+  border: none;
+}
+
+input[type=text]:focus {
+  outline-style: none;
+}
+
+#filter-region {
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+
+#filter-region:focus {
+  outline-style: none;
+}
+
+/*=== DESCRIPTION CONTRY ===*/
+.description-countries{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.content-flag {
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.content-flag .flag img {
+  width: 100%;
+}
+
+.country-description {
+  padding: 30px;
+}
+
+.country-description h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.country-description p {
+  line-height: 26px;
+}
