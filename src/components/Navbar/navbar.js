@@ -1,6 +1,8 @@
 import React from 'react';
 import { FiMoon } from 'react-icons/fi';
 
+import './style.css'
+
 export default function Navbar() {
   function darkLightMode() {
     const textDarkLightMode = document.querySelector('#dark-light-mode')

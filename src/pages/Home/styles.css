@@ -7,42 +7,13 @@
   --light-mode-background-color: hsl(0, 0%, 98%);
   }
 
-nav {
-  padding: 20px 50px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
-}
-
-.nav__title h1 {
-  font-size: 18px;
-}
-
-.nav__dark-light-mode {
-  font-weight: 300;
-  cursor: pointer;
-}
-
-.nav__moon {
-  margin-right: 10px;
-  position: relative;
-  top: 3px;
-}
-
-.nav__dark-light16px-mode span {
-  font-size: 14px;
-}
-
+/*=== SEARCH BAR ===*/
 .content-input {
   padding:50px;
   display: flex;
   align-items: center;
 }
 
-/*=== SEARCH BAR ===*/
 .classification-search {
   display: flex;
   align-items: flex-start;

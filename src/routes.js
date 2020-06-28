@@ -2,13 +2,15 @@ import React from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Country from './pages/Home';
+import Home from './pages/Home';
+import Details from './pages/Details'
 
 export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/' exact component={Country} />
+        <Route path='/' exact component={Home} />
+        <Route path='/details' component={Details} />
       </Switch>
     </BrowserRouter>
   );
