@@ -42,7 +42,7 @@ export default function Country() {
         {country.map(country => (
           <div className="content-flag light-mode-elements">
             <div className="flag">
-              <img src={country.flag} alt="flag county" />
+              <img src={country.flag} alt={`flag county ${country.name}`} />
             </div>
             <div className="country-description">
               <h2>{country.name}</h2>

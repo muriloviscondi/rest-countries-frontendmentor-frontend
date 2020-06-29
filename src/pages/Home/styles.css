@@ -78,13 +78,3 @@ input[type=text]:focus {
 .country-description {
   padding: 30px;
 }
-
-.country-description h2 {
-  margin-bottom: 20px;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.country-description p {
-  line-height: 26px;
-}

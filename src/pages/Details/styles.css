@@ -14,10 +14,36 @@
   text-decoration: none;
   color: var(--light-mode-input-color);
   border-radius: 5px;
+  box-shadow: 0px 0px 10px #ccc;
 }
 
 .button-back__icon {
   margin-right: 10px;
   position: relative;
   top: 2px;
+}
+
+.details__country-description {
+
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.details__flag img {
+  width: 550px;
+  height: 350px;
+}
+
+.details__border-countries {
+  margin-top: 140px;
 }
