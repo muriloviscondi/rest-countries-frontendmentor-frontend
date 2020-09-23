@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --Dark-Blue-Dark-color: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Dark-color: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Ligh-color: hsl(200, 15%, 8%);
+  --Dark-Gray-Light-color: hsl(0, 0%, 52%);
+  --Very-Light-Gray-Light-color: hsl(0, 0%, 98%);
+  --White-Dark-color: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+/*=== GLOBAL ===*/
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.grid-column-m4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.container {
+  padding: 0 100px;
+}
+
+/*=== NAVBAR ===*/
+nav {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+  justify-content: space-between;
+}
+
+.container.flex-row h1 {
+  font-size: 20px;
+}
+
+.dark-mode__swicth a {
+  margin-left: 10px;
+  position: relative;
+  top: -2px;
+  color: var(--Very-Dark-Blue-Dark-color);
+  text-decoration: none;
+}
+
+/*=== MAIN ===*/
+main {
+  border-top: 2px solid rgba(126, 120, 120, 0.3);
+  min-height: 87vh;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+  background-color: var(--Very-Light-Gray-Light-color);
+}
+
+/*=== SECTION SEARCHBAR ===*/
+.search-bar.flex-row {
+  padding-bottom: 25px !important;
+  justify-content: space-between;
+}
+
+/*=== SECTION COUNTRIES ===*/
+.countries {
+  max-width: 100vw;
+}
+
+.countries .card {
+  width: 100%;
+  background-color: var(--White-Dark-color);
+  box-shadow: 1px 1px 10px #777;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.countries .card .flag img {
+  width: 100%;
+  height: 150px;
+}
+
+.countries .card .description {
+  padding: 30px;
+}
+
+.countries .card .description .description__title h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.countries .card .description .description__country {
+  font-size: 16px;
+  line-height: 26px;
+}
