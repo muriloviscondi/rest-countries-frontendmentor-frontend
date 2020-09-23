@@ -1,4 +1,5 @@
 let countries = [];
+let countriesFilter = [];
 
 addEventListener("load", () => {
   fetchCountries();
@@ -13,11 +14,14 @@ async function fetchCountries() {
     return { name, alpha3Code, capital, population, region, flag };
   });
 
+  countriesFilter = [...countries];
+
   return render();
 }
 
 function render() {
   listCountries();
+  filteredCountries();
 }
 
 function listCountries() {
@@ -26,7 +30,7 @@ function listCountries() {
   let cardsCountriesHTML = "";
   divCountries.innerHTML = "";
 
-  countries.forEach((country) => {
+  countriesFilter.forEach((country) => {
     const cards = `
       <div class="card">
         <div class="flag">
@@ -42,7 +46,9 @@ function listCountries() {
             <h2>${country.name}</h2>
           </div>
           <div class="description__country">
-            <p><strong>Population:</strong> ${country.population}</p>
+            <p><strong>Population:</strong> ${country.population.toLocaleString(
+              "pt-BR"
+            )}</p>
             <p><strong>Region:</strong> ${country.region}</p>
             <p><strong>Capital:</strong> ${country.capital}</p>
           </div>
@@ -54,4 +60,25 @@ function listCountries() {
   });
 
   divCountries.innerHTML = cardsCountriesHTML;
+}
+
+function filteredCountries() {
+  const search = document.querySelector("#search");
+
+  search.addEventListener("keyup", (event) => {
+    const { key } = event;
+    const { value } = event.target;
+
+    // if (key !== "Enter") return;
+
+    searchingCountries(value.toLowerCase());
+  });
+}
+
+function searchingCountries(value) {
+  countriesFilter = countries.filter((item) => {
+    return item.name.toLowerCase().includes(value);
+  });
+
+  render();
 }
